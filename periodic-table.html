@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Периодична таблица</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo">
+            <div class="logo-box">Me</div>
+            <span class="logo-text">MENDELEEV</span>
+            <span class="logo-lab">LAB</span>
+        </a>
+        <button type="button" class="burger-menu" id="burgerMenu" title="Toggle navigation menu" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="main-nav" id="mainNav">
+            <a href="index.html">Менделеев и периодичният закон</a>
+            <a href="periodic-table.html">Периодична таблица</a>
+            <a href="laboratory.html">Лаборатория</a>
+            <a href="molecules.html">3D Молекули</a>
+        </nav>
+        <div class="header-actions">
+            <button class="theme-toggle">☀️</button>
+        </div>
+    </header>
+    
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                ПЕРИОДИЧНА<br>
+                <span class="hero-title-accent">ТАБЛИЦА</span>
+            </h1>
+            <p class="hero-description">
+                Интерактивно изследване на 118-те химични елемента. <br>
+                Открий принципите на Менделеев.
+            </p>
+             <div class="hero-buttons">
+                <a href="periodic-table.html" class="hero-btn hero-btn-primary">
+                    Периодична таблица 
+                </a>
+                <a href="laboratory.html" class="hero-btn hero-btn-secondary">
+                    Към Лабораторията
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1>Периодична таблица</h1>
+            
+        </header>
+
+        <section>
+            <!-- Вграденa интерактивна таблица (ptablе.com) -->
+            
+
+            <div class="controls">
+                <input type="text" id="searchInput" placeholder="Търси елемент по име или символ...">
+                <div class="filters">
+                    <button class="filter-btn active" data-category="all">Всички</button>
+                    <button class="filter-btn" data-category="alkali-metal">Алкални метали</button>
+                    <button class="filter-btn" data-category="alkaline-earth">Алкалоземни</button>
+                    <button class="filter-btn" data-category="transition-metal">Преходни метали</button>
+                    <button class="filter-btn" data-category="metalloid">Металоиди</button>
+                    <button class="filter-btn" data-category="nonmetal">Неметали</button>
+                    <button class="filter-btn" data-category="halogen">Халогени</button>
+                    <button class="filter-btn" data-category="noble-gas">Инертни газове</button>
+                </div>
+            </div>
+
+            <div id="periodicTable" class="periodic-table"></div>
+
+            <aside id="elementDetails" class="element-details">
+                <h2>Избери елемент</h2>
+                <p>Кликни върху елемент за повече информация.</p>
+            </aside>
+        </section>
+    </div>
+    
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logos-section">
+                <div class="footer-brand">
+                    <div class="logo-box">Me</div>
+                    <span class="logo-text">MENDELEEV</span>
+                    <span class="logo-lab">LAB</span>
+                </div>
+                <div class="footer-logo-section">
+                    <img src="img/npmg-logo-768x790.png" alt="NPMG Logo" class="footer-partner-logo">
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-nav-section">
+                        <h4>Навигация</h4>
+                        <ul>
+                            <li><a href="index.html#mendeleev-section">Менделеев</a></li>
+                            <li><a href="periodic-table.html">Периодичен Закон</a></li>
+                            <li><a href="molecules.html">3D Молекули</a></li>
+                            <li><a href="laboratory.html">Лаборатория</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-section">
+                <h4>Свържи се с нас</h4>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="contactName">Име</label>
+                        <input type="text" id="contactName" name="name" placeholder="Иван Иванов" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Имейл</label>
+                        <input type="email" id="contactEmail" name="email" placeholder="ivan@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Съобщение</label>
+                        <textarea id="contactMessage" name="message" placeholder="Как можем да ти помогнем?" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Изпрати съобщение</button>
+                </form>
+            </div>
+            <div class="contact-map-section">
+                <h4>Местоположение</h4>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.565587121092!2d23.327614174387808!3d42.670560315431146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8452cb5c33eb%3A0x558121dba76dc356!2z0J3QsNGG0LjQvtC90LDQu9C90LAg0L_RgNC40YDQvtC00L4t0LzQsNGC0LXQvNCw0YLQuNGH0LXRgdC60LAg0LPQuNC80L3QsNC30LjRjyDigJ7QkNC60LDQtC4g0JvRjtCx0L7QvNC40YAg0KfQsNC60LDQu9C-0LLigJw!5e0!3m2!1sbg!2sbg!4v1770232897637!5m2!1sbg!2sbg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact-info">
+                    <p><strong>Адрес:</strong> НПМГ "Акад. Любомир Чакалов" София, ул. "Бигла" №52</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                © 2026 MENDELEEV LAB. ВСИЧКИ ПРАВА ЗАПАЗЕНИ.
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
