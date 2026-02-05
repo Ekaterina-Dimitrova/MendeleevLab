@@ -74,6 +74,25 @@
     font-weight: 400;
 }
 
+.home-page .hero-section {
+    min-height: 70vh;
+}
+
+.home-page .hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    letter-spacing: -1px;
+}
+
+.home-page .hero-description {
+    font-size: 16px;
+}
+
+.home-page .hero-btn {
+    padding: 14px 28px;
+    font-size: 15px;
+    min-width: 180px;
+}
+
 .hero-buttons {
     display: flex;
     gap: 16px;
@@ -273,6 +292,7 @@
     background: radial-gradient(circle at top, #F8FAFC 0%, #E2E8F0 100%);
     border-radius: 20px;
     overflow: hidden;
+    min-height: auto;
 }
 
 #moleculeCanvas {
@@ -1175,6 +1195,9 @@ footer {
 /* Keep other specific styles like periodic table, quiz, etc. */
 .controls {
     margin-bottom: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -1219,6 +1242,12 @@ footer {
     grid-template-rows: repeat(7, 1fr) 0.5fr repeat(2, 1fr);
     gap: 2px;
     margin-bottom: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.element-details {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -2487,7 +2516,7 @@ body.dark-theme .main-nav a {
 }
 
 body.dark-theme .main-nav a:hover {
-    color: #FFFFFF;
+    color: #F3F4F6;
 }
 
 body.dark-theme .hero-section {
@@ -2508,7 +2537,7 @@ body.dark-theme .hero-badge {
 }
 
 body.dark-theme .hero-title {
-    color: #FFFFFF;
+    color: #E5E7EB;
 }
 
 body.dark-theme .hero-title-accent {
@@ -2547,7 +2576,7 @@ body.dark-theme .feature-item {
 }
 
 body.dark-theme .feature-title {
-    color: #F3F4F6;
+    color: #D1D5DB;
 }
 
 body.dark-theme .feature-description {
@@ -2560,11 +2589,11 @@ body.dark-theme .container {
 
 body.dark-theme .container header h1,
 body.dark-theme .section h2 {
-    color: #FFFFFF;
+    color: #E5E7EB;
 }
 
 body.dark-theme h1 {
-    color: #FFFFFF;
+    color: #E5E7EB;
 }
 
 body.dark-theme .container header .lead,
@@ -2657,7 +2686,7 @@ body.dark-theme .footer-links a {
 
 body.dark-theme .footer-nav-section ul li a:hover,
 body.dark-theme .footer-links a:hover {
-    color: #FFFFFF;
+    color: #F3F4F6;
 }
 
 body.dark-theme .element-details,
@@ -2705,6 +2734,80 @@ body.dark-theme .element-more-card {
 
 body.dark-theme .element-more-card a {
     color: #C4B5FD;
+}
+
+body.dark-theme .discovery-timeline {
+    background: #0F1117;
+    border: 1px solid #1F2937;
+}
+
+body.dark-theme .discovery-timeline h2 {
+    color: #A78BFA;
+}
+
+body.dark-theme .timeline:before {
+    background: #8B5CF6;
+}
+
+body.dark-theme .timeline-year {
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
+}
+
+body.dark-theme .timeline-content h4 {
+    color: #C4B5FD;
+}
+
+body.dark-theme .timeline-content p {
+    color: #CBD5E1;
+}
+
+body.dark-theme .periodic-law-section {
+    background: #0F1117;
+    border: 1px solid #1F2937;
+}
+
+body.dark-theme .periodic-law-section h2,
+body.dark-theme .patterns-section h2,
+body.dark-theme .categories-section h2 {
+    color: #A78BFA;
+}
+
+body.dark-theme .law-box {
+    background: #111827;
+    border-left-color: #8B5CF6;
+}
+
+body.dark-theme .law-text {
+    color: #E5E7EB;
+}
+
+body.dark-theme .law-modern {
+    color: #CBD5E1;
+    background: #0B1220;
+    border: 1px solid #1F2937;
+}
+
+body.dark-theme .pattern-card {
+    background: #111827;
+    border-top-color: #8B5CF6;
+}
+
+body.dark-theme .pattern-card h3 {
+    color: #C4B5FD;
+}
+
+body.dark-theme .pattern-card ul li {
+    color: #E5E7EB;
+}
+
+body.dark-theme .pattern-card ul li:before {
+    color: #A78BFA;
+}
+
+body.dark-theme .example-box {
+    background: #0B1220;
+    border-left-color: #3B82F6;
+    color: #CBD5E1;
 }
 /* ===========================
    ПЕРИОДИЧНА ТАБЛИЦА ВИКТОРИНА ИГРА СТИЛОВЕ
