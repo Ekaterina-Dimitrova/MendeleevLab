@@ -398,7 +398,38 @@
                 </div>
             </div>
 
-
+            <!-- Стари упражнения  -->
+            <div class="balance-exercise" id="balanceExercise">
+                <div id="exerciseSelection" class="exercise-selection">
+                    <button id="startBalance" class="quiz-btn primary-btn">🚀 Започни упражнение</button>
+                </div>
+                
+                <div id="exerciseContainer" class="exercise-container hidden">
+                    <div class="exercise-header">
+                        <span>Упражнение <strong id="currentExercise">1</strong>/6</span>
+                        <div class="exercise-progress">
+                            <div class="progress-bar" id="exerciseProgressBar"></div>
+                        </div>
+                    </div>
+                    
+                    <div id="exerciseContent" class="exercise-content">
+                        <h4 id="exerciseQuestion" class="exercise-question"></h4>
+                        <div id="exerciseInput" class="exercise-input-group"></div>
+                        <button id="checkEquationBtn" class="quiz-btn primary-btn">✓ Провери</button>
+                    </div>
+                    
+                    <div id="exerciseFeedback" class="exercise-feedback hidden">
+                        <div id="feedbackContent" class="feedback-content"></div>
+                        <button id="nextExerciseBtn" class="quiz-btn primary-btn">Следващо уравнение ➡️</button>
+                    </div>
+                    
+                    <div id="exerciseResults" class="exercise-results hidden">
+                        <h3>✅ Упражненията завършени!</h3>
+                        <button id="restartExerciseBtn" class="quiz-btn primary-btn">↻ Започни отново</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Секция: Викторина -->
         <div id="quiz-section" class="section">
