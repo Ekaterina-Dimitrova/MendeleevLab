@@ -64,25 +64,21 @@
                         <button class="molecule-btn" data-molecule="methane">Метан (CH₄)</button>
                         <button class="molecule-btn" data-molecule="ammonia">Амоняк (NH₃)</button>
                         <button class="molecule-btn" data-molecule="sodiumChloride">Натриев хлорид (NaCl)</button>
+                        <button class="molecule-btn" data-molecule="hydrogen">Водород (H₂)</button>
+                        <button class="molecule-btn" data-molecule="chlorine">Хлор (Cl₂)</button>
+                        <button class="molecule-btn" data-molecule="hydrogenChloride">Водороден хлорид (HCl)</button>
+                        <button class="molecule-btn" data-molecule="sodiumHydroxide">Натриева основа (NaOH)</button>
+                        <button class="molecule-btn" data-molecule="sulfuricAcid">Сярна киселина (H₂SO₄)</button>
+                        <button class="molecule-btn" data-molecule="magnesiumOxide">Магнезиев оксид (MgO)</button>
+                        <button class="molecule-btn" data-molecule="calciumOxide">Калциев оксид (CaO)</button>
+                        <button class="molecule-btn" data-molecule="calciumCarbonate">Калциев карбонат (CaCO₃)</button>
+                        <button class="molecule-btn" data-molecule="ironOxide">Железен оксид (Fe₂O₃)</button>
+                        <button class="molecule-btn" data-molecule="aluminumOxide">Алуминиев оксид (Al₂O₃)</button>
+                        <button class="molecule-btn" data-molecule="propane">Пропан (C₃H₈)</button>
+                        <button class="molecule-btn" data-molecule="ethane">Етан (C₂H₆)</button>
+                        <button class="molecule-btn" data-molecule="glucose">Глюкоза (C₆H₁₂O₆)</button>
                     </div>
 
-                    <div class="molecule-info-card">
-                        <h3 id="moleculeTitle">Вода (H₂O)</h3>
-                        <p id="moleculeFormula" class="molecule-formula">H₂O</p>
-                        <ul id="moleculeFacts" class="molecule-facts"></ul>
-                    </div>
-
-                    <div class="molecule-legend">
-                        <h4>Легенда на атомите</h4>
-                        <ul>
-                            <li><span class="legend-dot legend-h"></span> H - Водород</li>
-                            <li><span class="legend-dot legend-o"></span> O - Кислород</li>
-                            <li><span class="legend-dot legend-c"></span> C - Въглерод</li>
-                            <li><span class="legend-dot legend-n"></span> N - Азот</li>
-                            <li><span class="legend-dot legend-na"></span> Na - Натрий</li>
-                            <li><span class="legend-dot legend-cl"></span> Cl - Хлор</li>
-                        </ul>
-                    </div>
                 </aside>
 
                 <div class="molecules-viewer">
@@ -92,6 +88,36 @@
                     </div>
                     <div class="viewer-canvas">
                         <canvas id="moleculeCanvas"></canvas>
+                    </div>
+                    <div class="molecule-bottom-panel">
+                        <div class="molecule-info-card">
+                            <h3 id="moleculeTitle">Вода (H₂O)</h3>
+                            <p id="moleculeFormula" class="molecule-formula">H₂O</p>
+                            <ul id="moleculeFacts" class="molecule-facts"></ul>
+                        </div>
+                        <div class="molecule-legend">
+                            <h4>Легенда на атомите</h4>
+                            <ul>
+                                <li><span class="legend-dot legend-h"></span> H - Водород</li>
+                                <li><span class="legend-dot legend-o"></span> O - Кислород</li>
+                                <li><span class="legend-dot legend-c"></span> C - Въглерод</li>
+                                <li><span class="legend-dot legend-n"></span> N - Азот</li>
+                                <li><span class="legend-dot legend-na"></span> Na - Натрий</li>
+                                <li><span class="legend-dot legend-cl"></span> Cl - Хлор</li>
+                                <li><span class="legend-dot legend-s"></span> S - Сяра</li>
+                                <li><span class="legend-dot legend-mg"></span> Mg - Магнезий</li>
+                                <li><span class="legend-dot legend-ca"></span> Ca - Калций</li>
+                                <li><span class="legend-dot legend-fe"></span> Fe - Желязо</li>
+                                <li><span class="legend-dot legend-al"></span> Al - Алуминий</li>
+                                <li><span class="legend-dot legend-p"></span> P - Фосфор</li>
+                                <li><span class="legend-dot legend-k"></span> K - Калий</li>
+                                <li><span class="legend-dot legend-cr"></span> Cr - Хром</li>
+                                <li><span class="legend-dot legend-mn"></span> Mn - Манган</li>
+                                <li><span class="legend-dot legend-zn"></span> Zn - Цинк</li>
+                                <li><span class="legend-dot legend-cu"></span> Cu - Мед</li>
+                                <li><span class="legend-dot legend-ag"></span> Ag - Сребро</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
