@@ -117,7 +117,19 @@ document.addEventListener("DOMContentLoaded", function() {
         C: { color: 0x2f3e46, radius: 0.45 },
         N: { color: 0x3a86ff, radius: 0.42 },
         Na: { color: 0x9b5de5, radius: 0.55 },
-        Cl: { color: 0x2d6a4f, radius: 0.55 }
+        Cl: { color: 0x2d6a4f, radius: 0.55 },
+        S: { color: 0xf4d35e, radius: 0.5 },
+        Mg: { color: 0x43aa8b, radius: 0.55 },
+        Ca: { color: 0xf77f00, radius: 0.58 },
+        Fe: { color: 0xb56576, radius: 0.58 },
+        Al: { color: 0xadb5bd, radius: 0.52 },
+        P: { color: 0xff7b54, radius: 0.48 },
+        K: { color: 0x6a4c93, radius: 0.6 },
+        Cr: { color: 0x2a9d8f, radius: 0.58 },
+        Mn: { color: 0xe56b6f, radius: 0.58 },
+        Zn: { color: 0x4ea8de, radius: 0.56 },
+        Cu: { color: 0xb87333, radius: 0.56 },
+        Ag: { color: 0xc0c0c0, radius: 0.58 }
     };
 
     const molecules = {
@@ -226,6 +238,301 @@ document.addEventListener("DOMContentLoaded", function() {
                 { element: "Cl", position: [0.9, 0, 0] }
             ],
             bonds: [[0, 1, 1]]
+        },
+        hydrogen: {
+            title: "Водород (H₂)",
+            formula: "H₂",
+            facts: [
+                "Най-лекият химичен елемент.",
+                "Съществува като двуатомен газ.",
+                "Гори със син пламък."
+            ],
+            atoms: [
+                { element: "H", position: [-0.5, 0, 0] },
+                { element: "H", position: [0.5, 0, 0] }
+            ],
+            bonds: [[0, 1, 1]]
+        },
+        chlorine: {
+            title: "Хлор (Cl₂)",
+            formula: "Cl₂",
+            facts: [
+                "Зеленикаво-жълт газ с остра миризма.",
+                "Съществува като двуатомен газ.",
+                "Използва се за дезинфекция."
+            ],
+            atoms: [
+                { element: "Cl", position: [-0.9, 0, 0] },
+                { element: "Cl", position: [0.9, 0, 0] }
+            ],
+            bonds: [[0, 1, 1]]
+        },
+        hydrogenChloride: {
+            title: "Водороден хлорид (HCl)",
+            formula: "HCl",
+            facts: [
+                "Газ, който във вода образува солна киселина.",
+                "Полярна ковалентна връзка.",
+                "Важен реагент в лабораторията."
+            ],
+            atoms: [
+                { element: "H", position: [-0.6, 0, 0] },
+                { element: "Cl", position: [0.8, 0, 0] }
+            ],
+            bonds: [[0, 1, 1]]
+        },
+        sodiumHydroxide: {
+            title: "Натриева основа (NaOH)",
+            formula: "NaOH",
+            facts: [
+                "Силна основа, наричана сода каустик.",
+                "Състои се от натриев катион и хидроксиден анион.",
+                "Използва се при неутрализация."
+            ],
+            atoms: [
+                { element: "Na", position: [-1.2, 0, 0] },
+                { element: "O", position: [0, 0, 0] },
+                { element: "H", position: [0.9, 0.2, 0] }
+            ],
+            bonds: [
+                [0, 1, 1],
+                [1, 2, 1]
+            ]
+        },
+        sulfuricAcid: {
+            title: "Сярна киселина (H₂SO₄)",
+            formula: "H₂SO₄",
+            facts: [
+                "Една от най-важните неорганични киселини.",
+                "Съдържа централна сяра с четири кислорода.",
+                "Силна киселина и дехидратиращ агент."
+            ],
+            atoms: [
+                { element: "S", position: [0, 0, 0] },
+                { element: "O", position: [1.2, 0, 0] },
+                { element: "O", position: [-1.2, 0, 0] },
+                { element: "O", position: [0, 1.2, 0] },
+                { element: "O", position: [0, -1.2, 0] },
+                { element: "H", position: [1.8, 0.4, 0] },
+                { element: "H", position: [-1.8, -0.4, 0] }
+            ],
+            bonds: [
+                [0, 1, 2],
+                [0, 2, 2],
+                [0, 3, 1],
+                [0, 4, 1],
+                [1, 5, 1],
+                [2, 6, 1]
+            ]
+        },
+        magnesiumOxide: {
+            title: "Магнезиев оксид (MgO)",
+            formula: "MgO",
+            facts: [
+                "Бял прах, образуван при горене на магнезий.",
+                "Йонна връзка между Mg²⁺ и O²⁻.",
+                "Използва се в огнеупорни материали."
+            ],
+            atoms: [
+                { element: "Mg", position: [-0.8, 0, 0] },
+                { element: "O", position: [0.8, 0, 0] }
+            ],
+            bonds: [[0, 1, 1]]
+        },
+        calciumOxide: {
+            title: "Калциев оксид (CaO)",
+            formula: "CaO",
+            facts: [
+                "Познат като негасена вар.",
+                "Получава се при нагряване на варовик.",
+                "Силен основен оксид."
+            ],
+            atoms: [
+                { element: "Ca", position: [-0.9, 0, 0] },
+                { element: "O", position: [0.9, 0, 0] }
+            ],
+            bonds: [[0, 1, 1]]
+        },
+        calciumCarbonate: {
+            title: "Калциев карбонат (CaCO₃)",
+            formula: "CaCO₃",
+            facts: [
+                "Основна съставка на варовика и мрамора.",
+                "Съдържа карбонатен йон CO₃²⁻.",
+                "Разлага се при нагряване."
+            ],
+            atoms: [
+                { element: "Ca", position: [-1.4, 0, 0] },
+                { element: "C", position: [0.2, 0, 0] },
+                { element: "O", position: [1.3, 0, 0] },
+                { element: "O", position: [-0.3, 1.0, 0] },
+                { element: "O", position: [-0.3, -1.0, 0] }
+            ],
+            bonds: [
+                [1, 2, 2],
+                [1, 3, 1],
+                [1, 4, 1],
+                [0, 1, 1]
+            ]
+        },
+        ironOxide: {
+            title: "Железен оксид (Fe₂O₃)",
+            formula: "Fe₂O₃",
+            facts: [
+                "Познат като ръжда.",
+                "Съдържа желязо в степен на окисление +3.",
+                "Получава се при окисление на желязо."
+            ],
+            atoms: [
+                { element: "Fe", position: [-1.1, 0, 0] },
+                { element: "Fe", position: [1.1, 0, 0] },
+                { element: "O", position: [0, 1.1, 0] },
+                { element: "O", position: [0, -1.1, 0] },
+                { element: "O", position: [0, 0, 1.1] }
+            ],
+            bonds: [
+                [0, 2, 1],
+                [0, 3, 1],
+                [0, 4, 1],
+                [1, 2, 1],
+                [1, 3, 1],
+                [1, 4, 1]
+            ]
+        },
+        aluminumOxide: {
+            title: "Алуминиев оксид (Al₂O₃)",
+            formula: "Al₂O₃",
+            facts: [
+                "Среща се като минерала корунд.",
+                "Много твърд материал.",
+                "Използва се в абразиви и керамика."
+            ],
+            atoms: [
+                { element: "Al", position: [-1.1, 0, 0] },
+                { element: "Al", position: [1.1, 0, 0] },
+                { element: "O", position: [0, 1.1, 0] },
+                { element: "O", position: [0, -1.1, 0] },
+                { element: "O", position: [0, 0, 1.1] }
+            ],
+            bonds: [
+                [0, 2, 1],
+                [0, 3, 1],
+                [0, 4, 1],
+                [1, 2, 1],
+                [1, 3, 1],
+                [1, 4, 1]
+            ]
+        },
+        propane: {
+            title: "Пропан (C₃H₈)",
+            formula: "C₃H₈",
+            facts: [
+                "Използва се като гориво в газови бутилки.",
+                "Алкан с три въглеродни атома.",
+                "Гори до CO₂ и H₂O."
+            ],
+            atoms: [
+                { element: "C", position: [-1.2, 0, 0] },
+                { element: "C", position: [0, 0, 0] },
+                { element: "C", position: [1.2, 0, 0] },
+                { element: "H", position: [-1.8, 0.9, 0] },
+                { element: "H", position: [-1.8, -0.9, 0] },
+                { element: "H", position: [-1.2, 0, 1.0] },
+                { element: "H", position: [0, 1.0, 0.8] },
+                { element: "H", position: [0, -1.0, -0.8] },
+                { element: "H", position: [1.8, 0.9, 0] },
+                { element: "H", position: [1.8, -0.9, 0] },
+                { element: "H", position: [1.2, 0, -1.0] }
+            ],
+            bonds: [
+                [0, 1, 1],
+                [1, 2, 1],
+                [0, 3, 1],
+                [0, 4, 1],
+                [0, 5, 1],
+                [1, 6, 1],
+                [1, 7, 1],
+                [2, 8, 1],
+                [2, 9, 1],
+                [2, 10, 1]
+            ]
+        },
+        ethane: {
+            title: "Етан (C₂H₆)",
+            formula: "C₂H₆",
+            facts: [
+                "Въглеводород с два въглеродни атома.",
+                "Компонент на природния газ.",
+                "Алкан с единични връзки."
+            ],
+            atoms: [
+                { element: "C", position: [-0.8, 0, 0] },
+                { element: "C", position: [0.8, 0, 0] },
+                { element: "H", position: [-1.4, 0.9, 0] },
+                { element: "H", position: [-1.4, -0.9, 0] },
+                { element: "H", position: [-0.8, 0, 1.0] },
+                { element: "H", position: [1.4, 0.9, 0] },
+                { element: "H", position: [1.4, -0.9, 0] },
+                { element: "H", position: [0.8, 0, -1.0] }
+            ],
+            bonds: [
+                [0, 1, 1],
+                [0, 2, 1],
+                [0, 3, 1],
+                [0, 4, 1],
+                [1, 5, 1],
+                [1, 6, 1],
+                [1, 7, 1]
+            ]
+        },
+        glucose: {
+            title: "Глюкоза (C₆H₁₂O₆)",
+            formula: "C₆H₁₂O₆",
+            facts: [
+                "Основен източник на енергия за клетките.",
+                "Монозахарид с шест въглеродни атома.",
+                "Участва във фотосинтезата и дишането."
+            ],
+            atoms: [
+                { element: "C", position: [0, 1.2, 0] },
+                { element: "C", position: [1.0, 0.6, 0] },
+                { element: "C", position: [1.0, -0.6, 0] },
+                { element: "C", position: [0, -1.2, 0] },
+                { element: "C", position: [-1.0, -0.6, 0] },
+                { element: "C", position: [-1.0, 0.6, 0] },
+                { element: "O", position: [0, 2.0, 0] },
+                { element: "O", position: [1.8, 1.1, 0] },
+                { element: "O", position: [1.8, -1.1, 0] },
+                { element: "O", position: [0, -2.0, 0] },
+                { element: "O", position: [-1.8, -1.1, 0] },
+                { element: "O", position: [-1.8, 1.1, 0] },
+                { element: "H", position: [0, 2.6, 0] },
+                { element: "H", position: [2.4, 1.4, 0] },
+                { element: "H", position: [2.4, -1.4, 0] },
+                { element: "H", position: [0, -2.6, 0] },
+                { element: "H", position: [-2.4, -1.4, 0] },
+                { element: "H", position: [-2.4, 1.4, 0] }
+            ],
+            bonds: [
+                [0, 1, 1],
+                [1, 2, 1],
+                [2, 3, 1],
+                [3, 4, 1],
+                [4, 5, 1],
+                [5, 0, 1],
+                [0, 6, 1],
+                [1, 7, 1],
+                [2, 8, 1],
+                [3, 9, 1],
+                [4, 10, 1],
+                [5, 11, 1],
+                [6, 12, 1],
+                [7, 13, 1],
+                [8, 14, 1],
+                [9, 15, 1],
+                [10, 16, 1],
+                [11, 17, 1]
+            ]
         }
     };
 
