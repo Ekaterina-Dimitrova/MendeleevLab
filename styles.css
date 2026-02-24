@@ -1896,6 +1896,10 @@ img.portrait-icon {
 .fact-icon {
     font-size: 40px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 56px;
 }
 
 .fact-card h4 {
@@ -2767,6 +2771,10 @@ body.dark-theme .substance-list li {
     color: #E5E7EB;
 }
 
+body.dark-theme .fact-icon svg {
+    stroke: #FFFFFF !important;
+}
+
 body.dark-theme .main-footer {
     background: #0B1220;
     color: #D1D5DB;
@@ -2783,6 +2791,14 @@ body.dark-theme .contact-map-section h4,
 body.dark-theme .footer-brand-subtitle,
 body.dark-theme .footer-contact p {
     color: #C4B5FD;
+}
+
+body.dark-theme .footer-brand .logo-text {
+    color: #E5E7EB !important;
+}
+
+body.dark-theme .footer-brand .logo-lab {
+    color: #C4B5FD !important;
 }
 
 body.dark-theme .contact-form {
