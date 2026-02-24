@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Периодична таблица</title>
+    <link rel="icon" type="image/png" href="img/npmg-logo-768x790.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -75,7 +76,9 @@
                 </div>
             </div>
 
-            <div id="periodicTable" class="periodic-table"></div>
+            <div class="table-scroll-wrapper">
+                <div id="periodicTable" class="periodic-table"></div>
+            </div>
 
             <aside id="elementDetails" class="element-details">
                 <h2>Избери елемент</h2>
@@ -128,7 +131,7 @@
             <div class="contact-map-section">
                 <h4>Местоположение</h4>
                 <div class="contact-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.565587121092!2d23.327614174387808!3d42.670560315431146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8452cb5c33eb%3A0x558121dba76dc356!2z0J3QsNGG0LjQvtC90LDQu9C90LAg0L_RgNC40YDQvtC00L4t0LzQsNGC0LXQvNCw0YLQuNGH0LXRgdC60LAg0LPQuNC80L3QsNC30LjRjyDigJ7QkNC60LDQtC4g0JvRjtCx0L7QvNC40YAg0KfQsNC60LDQu9C-0LLigJw!5e0!3m2!1sbg!2sbg!4v1770232897637!5m2!1sbg!2sbg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe class="contact-map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.565587121092!2d23.327614174387808!3d42.670560315431146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8452cb5c33eb%3A0x558121dba76dc356!2z0J3QsNGG0LjQvtC90LDQu9C90LAg0L_RgNC40YDQvtC00L4t0LzQsNGC0LXQvNCw0YLQuNGH0LXRgdC60LAg0LPQuNC80L3QsNC30LjRjyDigJ7QkNC60LDQtC4g0JvRjtCx0L7QvNC40YAg0KfQsNC60LDQu9C-0LLigJw!5e0!3m2!1sbg!2sbg!4v1770232897637!5m2!1sbg!2sbg" title="Google Maps - NPMG Location" allowfullscreen=""></iframe>
                 </div>
                 <div class="contact-info">
                     <p><strong>Адрес:</strong> НПМГ "Акад. Любомир Чакалов" София, ул. "Бигла" №52</p>
@@ -142,5 +145,6 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="animations.js"></script>
 </body>
 </html>
