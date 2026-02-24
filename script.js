@@ -388,7 +388,7 @@ function showElementDetails(element) {
     const wikiUrl = `https://bg.wikipedia.org/wiki/${encodeURIComponent(element.name)}`;
     
     details.innerHTML = `
-        <h2>🔬 ${element.name} (${element.symbol}) <a href="${wikiUrl}" class="wiki-link" title="Отвори в Wikipedia">🔗</a></h2>
+        <h2>🔬 ${element.name} (${element.symbol}) <a href="#" class="wiki-link" title="Отвори в Wikipedia" onclick="openWikiPopup('${wikiUrl}'); return false;">🔗</a></h2>
         
         <div class="element-info-card">
             <p><strong>⚛️ Атомен номер:</strong> ${element.number}</p>
@@ -405,9 +405,22 @@ function showElementDetails(element) {
         </div>
         
         <div class="element-more-card">
-            <p><strong>📖 Научете повече:</strong> <a href="${wikiUrl}" target="_blank">Wikipedia статия за ${element.name}</a></p>
+            <p><strong>📖 Научете повече:</strong> <a href="#" onclick="openWikiPopup('${wikiUrl}'); return false;">Wikipedia статия за ${element.name}</a></p>
         </div>
     `;
+}
+
+// Wikipedia popup
+function openWikiPopup(url) {
+    const w = Math.min(1100, screen.availWidth * 0.85);
+    const h = Math.min(750, screen.availHeight * 0.85);
+    const left = screen.availLeft + (screen.availWidth  - w) / 2;
+    const top  = screen.availTop  + (screen.availHeight - h) / 2;
+    window.open(
+        url,
+        'WikiPopup',
+        `width=${Math.round(w)},height=${Math.round(h)},left=${Math.round(left)},top=${Math.round(top)},resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,status=no`
+    );
 }
 
 // Получаване на име на категория
