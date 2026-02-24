@@ -1643,7 +1643,7 @@ footer {
 
 .substance-list li {
     margin: 5px 0;
-    color: #FFFFFF;
+    color: #333;
 }
 
 /* Упражнения за изравняване */
@@ -2413,6 +2413,89 @@ main, section {
     color: #333;
 }
 
+/* Accordion card */
+.accordion-group {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+}
+
+.accordion-group .accordion-card {
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.accordion-group .accordion-card:first-child {
+    border-top: none;
+    border-radius: 12px 12px 0 0;
+}
+
+.accordion-group .accordion-card:last-child {
+    border-radius: 0 0 12px 12px;
+}
+
+.accordion-group .accordion-header {
+    border-radius: 0;
+}
+
+.accordion-group .accordion-card:first-child .accordion-header {
+    border-radius: 12px 12px 0 0;
+}
+
+.accordion-group details[open]:last-child .accordion-header,
+.accordion-group .accordion-card:last-child .accordion-header {
+    border-radius: 0 0 0 0;
+}
+
+.accordion-card {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.accordion-header {
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 22px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #667eea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-user-select: none;
+    user-select: none;
+    border-radius: 12px;
+    transition: background 0.2s;
+}
+
+.accordion-header::-webkit-details-marker { display: none; }
+
+.accordion-header::after {
+    content: '▸';
+    font-size: 26px;
+    color: #667eea;
+    transition: transform 0.3s ease;
+    line-height: 1;
+}
+
+details[open] > .accordion-header::after {
+    transform: rotate(90deg);
+}
+
+.accordion-header:hover {
+    background: rgba(102, 126, 234, 0.06);
+}
+
+.accordion-body {
+    padding: 0 22px 20px;
+}
+
 /* Подробен пример */
 .detailed-example {
     background: #f8f9fa;
@@ -2558,6 +2641,24 @@ body.dark-theme .main-nav a {
 
 body.dark-theme .main-nav a:hover {
     color: #F3F4F6;
+}
+
+/* Mobile nav dark theme */
+@media (max-width: 768px) {
+    body.dark-theme .main-nav {
+        background-color: rgba(17, 24, 39, 0.98);
+        border-right: 1px solid #1F2937;
+    }
+
+    body.dark-theme .main-nav a {
+        border-bottom-color: #1F2937;
+        color: #D1D5DB;
+    }
+
+    body.dark-theme .main-nav a:hover {
+        color: #F3F4F6;
+        background: rgba(139, 92, 246, 0.08);
+    }
 }
 
 body.dark-theme .hero-section {
@@ -2707,8 +2808,10 @@ body.dark-theme .form-group textarea::placeholder {
 
 body.dark-theme .form-group input:focus,
 body.dark-theme .form-group textarea:focus {
-    background: #1F2937;
+    outline: none;
     border-color: #8B5CF6;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
 }
 
 body.dark-theme .contact-info {
@@ -2850,6 +2953,348 @@ body.dark-theme .example-box {
     border-left-color: #3B82F6;
     color: #CBD5E1;
 }
+
+/* Dark theme – Laboratory page: tutorial cards & steps */
+body.dark-theme .tutorial-section {
+    background: #0F1117;
+}
+
+body.dark-theme .tutorial-section h3 {
+    color: #A78BFA;
+}
+
+body.dark-theme .accordion-group {
+    box-shadow: none;
+}
+
+body.dark-theme .accordion-group .accordion-card {
+    border-top-color: #1F2937;
+}
+
+body.dark-theme .accordion-card {
+    background: #111827;
+    border: 1px solid #1F2937;
+    box-shadow: none;
+}
+
+body.dark-theme .accordion-header {
+    color: #A78BFA;
+}
+
+body.dark-theme .accordion-header::after {
+    color: #A78BFA;
+}
+
+body.dark-theme .accordion-header:hover {
+    background: rgba(139, 92, 246, 0.08);
+}
+
+body.dark-theme .detailed-example {
+    background: #1F2937;
+}
+
+body.dark-theme .example-step {
+    background: #111827;
+    border-left-color: #8B5CF6;
+}
+
+body.dark-theme .example-step strong {
+    color: #A78BFA;
+}
+
+body.dark-theme .formula-highlight {
+    background: #1e3a5f;
+    color: #93C5FD;
+}
+
+body.dark-theme .formula-highlight.success {
+    background: #14532d;
+    color: #86EFAC;
+}
+
+body.dark-theme .important-box {
+    background: #1c1a00;
+    border-left-color: #FBBF24;
+}
+
+body.dark-theme .important-box strong {
+    color: #FCD34D;
+}
+
+body.dark-theme .step-example {
+    background: #1F2937;
+    color: #E5E7EB;
+}
+
+body.dark-theme .step-note {
+    color: #9CA3AF !important;
+}
+
+body.dark-theme .tip-item p {
+    color: #CBD5E1;
+}
+
+body.dark-theme .atom-table td {
+    border-color: #374151;
+    color: #E5E7EB;
+    background: #111827;
+}
+
+body.dark-theme .atom-table tr:nth-child(even) td {
+    background: #1F2937;
+}
+
+body.dark-theme .atom-table .wrong {
+    background: #3b1111;
+    color: #FCA5A5;
+}
+
+body.dark-theme .atom-table .correct {
+    background: #14532d;
+    color: #86EFAC;
+}
+
+/* Dark theme – Laboratory page: balance exercise */
+body.dark-theme .balance-exercise {
+    background: #111827;
+}
+
+body.dark-theme .balance-question {
+    background: #1F2937;
+    color: #E5E7EB;
+}
+
+body.dark-theme .balance-equation {
+    background: #1e3a5f;
+    color: #E5E7EB;
+}
+
+body.dark-theme .coefficient-group {
+    background: #1F2937;
+    box-shadow: none;
+}
+
+body.dark-theme .coefficient-group label {
+    color: #D1D5DB;
+}
+
+body.dark-theme .balance-hint {
+    background: #1c1a00;
+    border-left-color: #FBBF24;
+    color: #FCD34D;
+}
+
+body.dark-theme .balance-explanation {
+    background: #1e3a5f;
+    color: #CBD5E1;
+}
+
+body.dark-theme .balance-stats {
+    background: #1F2937;
+    color: #E5E7EB;
+}
+
+/* Dark theme – Laboratory page: balance game */
+body.dark-theme .balance-game-section {
+    background: #111827;
+}
+
+body.dark-theme .balance-game-header h3 {
+    color: #E5E7EB;
+}
+
+body.dark-theme .balance-game-header p,
+body.dark-theme .game-description p,
+body.dark-theme .game-instructions h4,
+body.dark-theme .instruction-list li {
+    color: #CBD5E1;
+}
+
+body.dark-theme .balance-game-container {
+    background: #1F2937;
+    border-color: #374151;
+}
+
+body.dark-theme .balance-game-header-stats {
+    background: #111827;
+    border-color: #374151;
+}
+
+body.dark-theme .game-stat {
+    color: #D1D5DB;
+}
+
+body.dark-theme .balance-mode-btn {
+    background: #1F2937;
+    border-color: #374151;
+    color: #D1D5DB;
+}
+
+body.dark-theme .balance-mode-btn:hover {
+    border-color: #8B5CF6;
+}
+
+body.dark-theme .balance-mode-btn.active {
+    background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%);
+    color: #fff;
+    border-color: transparent;
+}
+
+body.dark-theme .game-mode-selector {
+    background: #111827;
+    border: 1px solid #1F2937;
+    box-shadow: none;
+}
+
+body.dark-theme .mode-desc {
+    color: #9CA3AF;
+}
+
+body.dark-theme .equation-display {
+    background: #111827;
+    border-color: #374151;
+}
+
+body.dark-theme .equation-side {
+    background: #1F2937;
+    border-color: #374151;
+}
+
+body.dark-theme .balance-3d-viewer {
+    background: #111827;
+    border-color: #374151;
+}
+
+body.dark-theme .balance-3d-header {
+    background: #1F2937;
+    border-color: #374151;
+}
+
+body.dark-theme .balance-3d-header h4 {
+    color: #E5E7EB;
+}
+
+body.dark-theme .balance-3d-controls label {
+    color: #D1D5DB;
+}
+
+body.dark-theme .balance-3d-select {
+    background: #111827;
+    color: #E5E7EB;
+    border-color: #374151;
+}
+
+body.dark-theme .atom-panel {
+    background: #1F2937;
+    border-left-color: #8B5CF6;
+}
+
+body.dark-theme .atom-panel h4,
+body.dark-theme .atom-panel .atom-symbol {
+    color: #D1D5DB;
+}
+
+body.dark-theme .balance-status {
+    background: #111827;
+}
+
+body.dark-theme .results-box {
+    background: #1F2937;
+    border-color: #374151;
+    color: #E5E7EB;
+}
+
+body.dark-theme .stat-row {
+    color: #CBD5E1;
+    border-color: #374151;
+}
+
+body.dark-theme .game-levels,
+body.dark-theme .level-info {
+    color: #CBD5E1;
+}
+
+body.dark-theme .game-instructions {
+    background: #1F2937;
+    border-color: #374151;
+}
+
+/* Dark theme – Molecules page */
+body.dark-theme .molecules-sidebar {
+    background: #111827;
+    border-color: #1F2937;
+    box-shadow: none;
+}
+
+body.dark-theme .molecules-sidebar h2 {
+    color: #E5E7EB;
+}
+
+body.dark-theme .molecule-btn {
+    background: #1F2937;
+    border-color: #374151;
+    color: #D1D5DB;
+}
+
+body.dark-theme .molecule-btn:hover {
+    border-color: #8B5CF6;
+    background: #1F2937;
+}
+
+body.dark-theme .molecule-btn.active {
+    background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%);
+    color: #ffffff;
+    border-color: transparent;
+}
+
+body.dark-theme .molecules-viewer {
+    background: #111827;
+    border-color: #1F2937;
+    box-shadow: none;
+}
+
+body.dark-theme .viewer-header h2 {
+    color: #E5E7EB;
+}
+
+body.dark-theme .viewer-header p {
+    color: #9CA3AF;
+}
+
+body.dark-theme .viewer-canvas {
+    background: radial-gradient(circle at top, #0F172A 0%, #1F2937 100%);
+}
+
+body.dark-theme .molecule-info-card {
+    background: #1F2937;
+}
+
+body.dark-theme .molecule-info-card h3 {
+    color: #E5E7EB;
+}
+
+body.dark-theme .molecule-formula {
+    color: #C4B5FD !important;
+    text-shadow: none !important;
+}
+
+body.dark-theme .molecule-facts {
+    color: #CBD5E1;
+}
+
+body.dark-theme .molecule-legend {
+    border-top-color: #1F2937;
+    color: #CBD5E1;
+}
+
+body.dark-theme .molecule-bottom-panel .molecule-legend {
+    background: #1F2937;
+}
+
+body.dark-theme .molecule-legend h4 {
+    color: #E5E7EB;
+}
+
 /* ===========================
    ПЕРИОДИЧНА ТАБЛИЦА ВИКТОРИНА ИГРА СТИЛОВЕ
    =========================== */
@@ -3589,8 +4034,19 @@ body.dark-theme .periodic-element[data-category="actinide"] {
 }
 
 @media (max-width: 768px) {
+    .table-scroll-wrapper {
+        overflow-x: auto;
+        padding-bottom: 8px;
+        cursor: grab;
+    }
+
+    .table-scroll-wrapper:active {
+        cursor: grabbing;
+    }
+
     .periodic-table {
-        grid-template-columns: repeat(18, 1fr);
+        grid-template-columns: repeat(18, minmax(38px, 1fr));
+        min-width: 700px;
         gap: 2px;
         padding: 8px;
     }
@@ -3615,8 +4071,14 @@ body.dark-theme .periodic-element[data-category="actinide"] {
 }
 
 @media (max-width: 480px) {
+    .table-scroll-wrapper {
+        overflow-x: auto;
+        padding-bottom: 8px;
+    }
+
     .periodic-table {
-        grid-template-columns: repeat(18, 1fr);
+        grid-template-columns: repeat(18, minmax(34px, 1fr));
+        min-width: 640px;
         gap: 1px;
         padding: 4px;
     }
@@ -4112,9 +4574,9 @@ body.dark-theme .exercise-results h3 {
 }
 
 body.dark-theme .molecule-item {
-    background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
-    border-color: #E5E7EB;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    background: #1F2937;
+    border-color: #374151;
+    box-shadow: none;
 }
 
 body.dark-theme .molecule-item:hover {
@@ -4669,4 +5131,274 @@ body.dark-theme .level-info span:last-child {
 
 body.dark-theme .game-levels {
     border-top-color: rgba(139, 92, 246, 0.2);
+}
+
+/* =============================================
+   WIKIPEDIA POPUP MODAL
+   ============================================= */
+#wikiPopupOverlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    animation: wikiOverlayIn 0.25s ease;
+}
+
+#wikiPopupOverlay.active {
+    display: flex;
+}
+
+@keyframes wikiOverlayIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.wiki-popup {
+    background: #fff;
+    border-radius: 16px;
+    width: 90vw;
+    max-width: 960px;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    animation: wikiPopupIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes wikiPopupIn {
+    from { opacity: 0; transform: scale(0.92) translateY(20px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.wiki-popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid #E5E7EB;
+    background: #F9FAFB;
+    border-radius: 16px 16px 0 0;
+    flex-shrink: 0;
+}
+
+.wiki-popup-title {
+    font-weight: 700;
+    font-size: 16px;
+    color: #1F2937;
+}
+
+.wiki-popup-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #6B7280;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+    line-height: 1;
+}
+
+.wiki-popup-close:hover {
+    background: #F3F4F6;
+    color: #111827;
+}
+
+.wiki-popup-frame {
+    flex: 1;
+    width: 100%;
+    border: none;
+}
+
+/* Dark theme */
+body.dark-theme .wiki-popup {
+    background: #111827;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-theme .wiki-popup-header {
+    background: #0F1117;
+    border-bottom-color: #1F2937;
+}
+
+body.dark-theme .wiki-popup-title {
+    color: #E5E7EB;
+}
+
+body.dark-theme .wiki-popup-close {
+    color: #9CA3AF;
+}
+
+body.dark-theme .wiki-popup-close:hover {
+    background: #1F2937;
+    color: #F9FAFB;
+}
+
+/* =============================================
+   MODERN ANIMATIONS & TRANSITIONS
+   ============================================= */
+
+/* Page fade-in */
+body {
+    animation: pageFadeIn 0.5s ease forwards;
+}
+
+@keyframes pageFadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll-triggered animation base */
+.animated-card {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animated-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delay helpers */
+.animated-card:nth-child(2) { transition-delay: 0.1s; }
+.animated-card:nth-child(3) { transition-delay: 0.2s; }
+.animated-card:nth-child(4) { transition-delay: 0.3s; }
+.animated-card:nth-child(5) { transition-delay: 0.4s; }
+.animated-card:nth-child(6) { transition-delay: 0.5s; }
+.animated-card:nth-child(7) { transition-delay: 0.6s; }
+
+/* Hover lift for cards */
+.fact-card,
+.pattern-card,
+.tutorial-card,
+.timeline-content,
+.equation-card,
+.element-info-card,
+.element-about-card,
+.element-more-card,
+.contact-form,
+.contact-info,
+.feature-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fact-card:hover,
+.pattern-card:hover,
+.tutorial-card:hover,
+.timeline-content:hover,
+.equation-card:hover,
+.element-info-card:hover,
+.element-about-card:hover,
+.element-more-card:hover,
+.contact-form:hover,
+.contact-info:hover,
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Button press effect */
+.hero-btn,
+.submit-btn,
+.quiz-btn,
+.filter-btn,
+.table-btn,
+.mode-btn,
+.balance-mode-btn,
+.molecule-btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.hero-btn:active,
+.submit-btn:active,
+.quiz-btn:active,
+.filter-btn:active,
+.table-btn:active,
+.mode-btn:active,
+.balance-mode-btn:active,
+.molecule-btn:active {
+    transform: translateY(0) scale(0.97);
+}
+
+/* Nav link underline animation */
+.main-nav a {
+    position: relative;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #8B5CF6, #3B82F6);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active-link::after {
+    width: 100%;
+}
+
+/* Accordion open/close smooth height */
+details.accordion-card {
+    transition: box-shadow 0.3s ease;
+}
+
+/* Floating logo pulse */
+@keyframes logoPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.3); }
+    50%       { box-shadow: 0 0 0 8px rgba(139, 92, 246, 0); }
+}
+
+.logo-box {
+    animation: logoPulse 3s ease-in-out infinite;
+}
+
+/* Hero title shine */
+@keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position:  200% center; }
+}
+
+.hero-title-accent {
+    background-size: 200% auto;
+    animation: shimmer 4s linear infinite;
+}
+
+/* Timeline item slide-in */
+.timeline-item {
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(6px);
+}
+
+/* Dark theme overrides for hover shadows */
+body.dark-theme .fact-card:hover,
+body.dark-theme .pattern-card:hover,
+body.dark-theme .tutorial-card:hover,
+body.dark-theme .timeline-content:hover,
+body.dark-theme .equation-card:hover,
+body.dark-theme .element-info-card:hover,
+body.dark-theme .element-about-card:hover,
+body.dark-theme .element-more-card:hover,
+body.dark-theme .contact-form:hover,
+body.dark-theme .contact-info:hover,
+body.dark-theme .feature-item:hover {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(139, 92, 246, 0.1);
 }
