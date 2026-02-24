@@ -654,8 +654,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener("resize", resizeRenderer);
 
+    // Fix zero-size canvas on initial load using ResizeObserver
+    if (window.ResizeObserver) {
+        const ro = new ResizeObserver(() => { resizeRenderer(); });
+        ro.observe(canvas.parentElement);
+    }
+
     setMolecule("water");
-    resizeRenderer();
+    // Defer first resize until layout is painted
+    requestAnimationFrame(() => { requestAnimationFrame(resizeRenderer); });
     animate();
     }
     
