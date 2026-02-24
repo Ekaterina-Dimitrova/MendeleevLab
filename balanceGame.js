@@ -151,6 +151,10 @@ class BalanceGameManager {
 
         const gameContainer = document.getElementById('balanceGameContainer');
         gameContainer.classList.remove('hidden');
+
+        setTimeout(() => {
+            gameContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 50);
         
         this.displayEquation();
     }
