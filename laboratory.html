@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лаборатория - Химични уравнения, упражнения и викторина</title>
+    <link rel="icon" type="image/png" href="img/npmg-logo-768x790.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -128,123 +129,125 @@
                     </div>
                 </div>
 
-                <div class="tutorial-card">
-                    <h4>📝 Стъпки за изравняване:</h4>
-                    <div class="steps-grid">
-                        <div class="step-card">
-                            <div class="step-number">1</div>
-                            <h5>Запиши уравнението</h5>
-                            <p>Първо запиши неизравненото уравнение с правилните химични формули</p>
-                            <div class="step-example">H₂ + O₂ → H₂O</div>
-                        </div>
+                <div class="accordion-group">
 
-                        <div class="step-card">
-                            <div class="step-number">2</div>
-                            <h5>Преброй атомите</h5>
-                            <p>Направи таблица и преброй атомите от всеки елемент от двете страни</p>
-                            <div class="step-example">
-                                <table class="atom-table">
-                                    <tr><th>Елемент</th><th>Вляво</th><th>Вдясно</th></tr>
-                                    <tr><td>H</td><td>2</td><td>2</td></tr>
-                                    <tr><td>O</td><td>2</td><td class="wrong">1</td></tr>
-                                </table>
+                    <details class="accordion-card">
+                        <summary class="accordion-header">📝 Стъпки за изравняване</summary>
+                        <div class="accordion-body">
+                            <div class="steps-grid">
+                                <div class="step-card">
+                                    <div class="step-number">1</div>
+                                    <h5>Запиши уравнението</h5>
+                                    <p>Първо запиши неизравненото уравнение с правилните химични формули</p>
+                                    <div class="step-example">H₂ + O₂ → H₂O</div>
+                                </div>
+                                <div class="step-card">
+                                    <div class="step-number">2</div>
+                                    <h5>Преброй атомите</h5>
+                                    <p>Направи таблица и преброй атомите от всеки елемент от двете страни</p>
+                                    <div class="step-example">
+                                        <table class="atom-table">
+                                            <tr><th>Елемент</th><th>Вляво</th><th>Вдясно</th></tr>
+                                            <tr><td>H</td><td>2</td><td>2</td></tr>
+                                            <tr><td>O</td><td>2</td><td class="wrong">1</td></tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="step-card">
+                                    <div class="step-number">3</div>
+                                    <h5>Постави коефициенти</h5>
+                                    <p>Използвай числа (коефициенти) пред формулите, за да изравниш атомите</p>
+                                    <div class="step-example">2H₂ + O₂ → 2H₂O</div>
+                                    <p class="step-note">Коефициент 2 пред H₂O означава 2 молекули вода</p>
+                                </div>
+                                <div class="step-card">
+                                    <div class="step-number">4</div>
+                                    <h5>Провери отново</h5>
+                                    <p>Преброй атомите отново и увери се, че са равни от двете страни</p>
+                                    <div class="step-example">
+                                        <table class="atom-table">
+                                            <tr><th>Елемент</th><th>Вляво</th><th>Вдясно</th></tr>
+                                            <tr><td>H</td><td class="correct">4</td><td class="correct">4</td></tr>
+                                            <tr><td>O</td><td class="correct">2</td><td class="correct">2</td></tr>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </details>
 
-                        <div class="step-card">
-                            <div class="step-number">3</div>
-                            <h5>Постави коефициенти</h5>
-                            <p>Използвай числа (коефициенти) пред формулите, за да изравниш атомите</p>
-                            <div class="step-example">2H₂ + O₂ → 2H₂O</div>
-                            <p class="step-note">Коефициент 2 пред H₂O означава 2 молекули вода</p>
-                        </div>
-
-                        <div class="step-card">
-                            <div class="step-number">4</div>
-                            <h5>Провери отново</h5>
-                            <p>Преброй атомите отново и увери се, че са равни от двете страни</p>
-                            <div class="step-example">
-                                <table class="atom-table">
-                                    <tr><th>Елемент</th><th>Вляво</th><th>Вдясно</th></tr>
-                                    <tr><td>H</td><td class="correct">4</td><td class="correct">4</td></tr>
-                                    <tr><td>O</td><td class="correct">2</td><td class="correct">2</td></tr>
-                                </table>
+                    <details class="accordion-card">
+                        <summary class="accordion-header">💡 Полезни съвети</summary>
+                        <div class="accordion-body">
+                            <div class="tips-list">
+                                <div class="tip-item">
+                                    <span class="tip-icon">✓</span>
+                                    <p><strong>Започни с най-сложната молекула</strong> - обикновено това е тази с най-много атоми</p>
+                                </div>
+                                <div class="tip-item">
+                                    <span class="tip-icon">✓</span>
+                                    <p><strong>Изравни метали първо</strong>, след това неметали, и накрая водород и кислород</p>
+                                </div>
+                                <div class="tip-item">
+                                    <span class="tip-icon">✓</span>
+                                    <p><strong>Използвай най-малките цели числа</strong> за коефициенти (избягвай дроби)</p>
+                                </div>
+                                <div class="tip-item">
+                                    <span class="tip-icon">✓</span>
+                                    <p><strong>Не променяй формулите!</strong> Можеш да променяш само коефициентите пред тях</p>
+                                </div>
+                                <div class="tip-item">
+                                    <span class="tip-icon">✓</span>
+                                    <p><strong>Винаги проверявай работата си</strong> като пребройш всички атоми накрая</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </details>
 
-                <div class="tutorial-card">
-                    <h4>💡 Полезни съвети:</h4>
-                    <div class="tips-list">
-                        <div class="tip-item">
-                            <span class="tip-icon">✓</span>
-                            <p><strong>Започни с най-сложната молекула</strong> - обикновено това е тази с най-много атоми</p>
+                    <details class="accordion-card">
+                        <summary class="accordion-header">📚 Примерно решение стъпка по стъпка</summary>
+                        <div class="accordion-body">
+                            <div class="detailed-example">
+                                <div class="example-step">
+                                    <strong>Задача:</strong> Изравни уравнението: <span class="formula-highlight">Fe + O₂ → Fe₂O₃</span>
+                                </div>
+                                <div class="example-step">
+                                    <strong>Стъпка 1:</strong> Преброй атомите
+                                    <table class="atom-table">
+                                        <tr><th>Елемент</th><th>Вляво</th><th>Вдясно</th><th>Статус</th></tr>
+                                        <tr><td>Fe</td><td>1</td><td>2</td><td>❌ Не е изравнено</td></tr>
+                                        <tr><td>O</td><td>2</td><td>3</td><td>❌ Не е изравнено</td></tr>
+                                    </table>
+                                </div>
+                                <div class="example-step">
+                                    <strong>Стъпка 2:</strong> Започни с Fe₂O₃ (най-сложната молекула)<br>
+                                    Имаме 2 Fe вдясно → поставяме коефициент 2 пред Fe вляво<br>
+                                    <span class="formula-highlight">2Fe + O₂ → Fe₂O₃</span>
+                                </div>
+                                <div class="example-step">
+                                    <strong>Стъпка 3:</strong> Сега изравни кислорода<br>
+                                    Имаме 3 O вдясно, но O₂ има 2 атома<br>
+                                    За да получим 6 O (най-малко общо кратно на 2 и 3):<br>
+                                    Поставяме 3 пред O₂ (3×2=6) и 2 пред Fe₂O₃ (2×3=6)<br>
+                                    <span class="formula-highlight">Fe + 3O₂ → 2Fe₂O₃</span>
+                                </div>
+                                <div class="example-step">
+                                    <strong>Стъпка 4:</strong> Сега имаме 4 Fe вдясно (2×2)<br>
+                                    Поставяме 4 пред Fe вляво<br>
+                                    <span class="formula-highlight success">4Fe + 3O₂ → 2Fe₂O₃</span>
+                                </div>
+                                <div class="example-step">
+                                    <strong>Стъпка 5:</strong> Проверка!
+                                    <table class="atom-table">
+                                        <tr><th>Елемент</th><th>Вляво</th><th>Вдясно</th><th>Статус</th></tr>
+                                        <tr><td>Fe</td><td class="correct">4</td><td class="correct">4 (2×2)</td><td>✅ Изравнено</td></tr>
+                                        <tr><td>O</td><td class="correct">6 (3×2)</td><td class="correct">6 (2×3)</td><td>✅ Изравнено</td></tr>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
-                        <div class="tip-item">
-                            <span class="tip-icon">✓</span>
-                            <p><strong>Изравни метали първо</strong>, след това неметали, и накрая водород и кислород</p>
-                        </div>
-                        <div class="tip-item">
-                            <span class="tip-icon">✓</span>
-                            <p><strong>Използвай най-малките цели числа</strong> за коефициенти (избягвай дроби)</p>
-                        </div>
-                        <div class="tip-item">
-                            <span class="tip-icon">✓</span>
-                            <p><strong>Не променяй формулите!</strong> Можеш да променяш само коефициентите пред тях</p>
-                        </div>
-                        <div class="tip-item">
-                            <span class="tip-icon">✓</span>
-                            <p><strong>Винаги проверявай работата си</strong> като пребройш всички атоми накрая</p>
-                        </div>
-                    </div>
-                </div>
+                    </details>
 
-                <div class="tutorial-card">
-                    <h4>📚 Примерно решение стъпка по стъпка:</h4>
-                    <div class="detailed-example">
-                        <div class="example-step">
-                            <strong>Задача:</strong> Изравни уравнението: <span class="formula-highlight">Fe + O₂ → Fe₂O₃</span>
-                        </div>
-
-                        <div class="example-step">
-                            <strong>Стъпка 1:</strong> Преброй атомите
-                            <table class="atom-table">
-                                <tr><th>Елемент</th><th>Вляво</th><th>Вдясно</th><th>Статус</th></tr>
-                                <tr><td>Fe</td><td>1</td><td>2</td><td>❌ Не е изравнено</td></tr>
-                                <tr><td>O</td><td>2</td><td>3</td><td>❌ Не е изравнено</td></tr>
-                            </table>
-                        </div>
-
-                        <div class="example-step">
-                            <strong>Стъпка 2:</strong> Започни с Fe₂O₃ (най-сложната молекула)<br>
-                            Имаме 2 Fe вдясно → поставяме коефициент 2 пред Fe вляво<br>
-                            <span class="formula-highlight">2Fe + O₂ → Fe₂O₃</span>
-                        </div>
-
-                        <div class="example-step">
-                            <strong>Стъпка 3:</strong> Сега изравни кислорода<br>
-                            Имаме 3 O вдясно, но O₂ има 2 атома<br>
-                            За да получим 6 O (най-малко общо кратно на 2 и 3):<br>
-                            Поставяме 3 пред O₂ (3×2=6) и 2 пред Fe₂O₃ (2×3=6)<br>
-                            <span class="formula-highlight">Fe + 3O₂ → 2Fe₂O₃</span>
-                        </div>
-
-                        <div class="example-step">
-                            <strong>Стъпка 4:</strong> Сега имаме 4 Fe вдясно (2×2)<br>
-                            Поставяме 4 пред Fe вляво<br>
-                            <span class="formula-highlight success">4Fe + 3O₂ → 2Fe₂O₃</span>
-                        </div>
-
-                        <div class="example-step">
-                            <strong>Стъпка 5:</strong> Проверка!
-                            <table class="atom-table">
-                                <tr><th>Елемент</th><th>Вляво</th><th>Вдясно</th><th>Статус</th></tr>
-                                <tr><td>Fe</td><td class="correct">4</td><td class="correct">4 (2×2)</td><td>✅ Изравнено</td></tr>
-                                <tr><td>O</td><td class="correct">6 (3×2)</td><td class="correct">6 (2×3)</td><td>✅ Изравнено</td></tr>
-                            </table>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -398,37 +401,6 @@
                 </div>
             </div>
 
-            <!-- Стари упражнения  -->
-            <div class="balance-exercise" id="balanceExercise">
-                <div id="exerciseSelection" class="exercise-selection">
-                    <button id="startBalance" class="quiz-btn primary-btn">🚀 Започни упражнение</button>
-                </div>
-                
-                <div id="exerciseContainer" class="exercise-container hidden">
-                    <div class="exercise-header">
-                        <span>Упражнение <strong id="currentExercise">1</strong>/6</span>
-                        <div class="exercise-progress">
-                            <div class="progress-bar" id="exerciseProgressBar"></div>
-                        </div>
-                    </div>
-                    
-                    <div id="exerciseContent" class="exercise-content">
-                        <h4 id="exerciseQuestion" class="exercise-question"></h4>
-                        <div id="exerciseInput" class="exercise-input-group"></div>
-                        <button id="checkEquationBtn" class="quiz-btn primary-btn">✓ Провери</button>
-                    </div>
-                    
-                    <div id="exerciseFeedback" class="exercise-feedback hidden">
-                        <div id="feedbackContent" class="feedback-content"></div>
-                        <button id="nextExerciseBtn" class="quiz-btn primary-btn">Следващо уравнение ➡️</button>
-                    </div>
-                    
-                    <div id="exerciseResults" class="exercise-results hidden">
-                        <h3>✅ Упражненията завършени!</h3>
-                        <button id="restartExerciseBtn" class="quiz-btn primary-btn">↻ Започни отново</button>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <!-- Секция: Викторина -->
@@ -613,5 +585,6 @@
     <script src="balanceMolecule3d.js" defer></script>
     <script src="script.js" defer></script>
     <script src="balanceGame.js" defer></script>
+    <script src="animations.js" defer></script>
 </body>
 </html>
