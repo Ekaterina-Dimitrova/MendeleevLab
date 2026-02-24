@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Химия — Периодична таблица</title>
+    <link rel="icon" type="image/png" href="img/npmg-logo-768x790.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="home-page">
@@ -74,17 +75,17 @@
                         <p>Руският химик <strong>Дмитрий Иванович Менделеев</strong> създава първата периодична таблица на химичните елементи през <strong>1869 година</strong>.</p>
                         <p>Той подреди всички известни тогава елементи (63 на брой) според тяхната атомна маса и забеляза, че свойствата им се повтарят периодично.</p>
                         <div class="mendeleev-facts">
-                            <div class="fact-card">
+                            <div class="fact-card animated-card">
                                 <div class="fact-icon">🎓</div>
                                 <h4>Образование</h4>
                                 <p>Професор по химия в Санкт Петербург</p>
                             </div>
-                            <div class="fact-card">
+                            <div class="fact-card animated-card">
                                 <div class="fact-icon">🔮</div>
                                 <h4>Предвиждания</h4>
                                 <p>Предсказал свойствата на 3 неоткрити елемента</p>
                             </div>
-                            <div class="fact-card">
+                            <div class="fact-card animated-card">
                                 <div class="fact-icon">📊</div>
                                 <h4>Таблицата</h4>
                                 <p>Оставил празни места за бъдещи открития</p>
@@ -112,7 +113,7 @@
                 <h2>🔍 Закономерности в периодичната система</h2>
                 
                 <div class="patterns-grid">
-                    <div class="pattern-card">
+                    <div class="pattern-card animated-card">
                         <h3>📏 Периоди (хоризонтални редове)</h3>
                         <ul>
                             <li><strong>7 периода</strong> в таблицата</li>
@@ -125,7 +126,7 @@
                         </div>
                     </div>
 
-                    <div class="pattern-card">
+                    <div class="pattern-card animated-card">
                         <h3>📐 Групи (вертикални колони)</h3>
                         <ul>
                             <li><strong>8 групи</strong> (I до VIII)</li>
@@ -138,7 +139,7 @@
                         </div>
                     </div>
 
-                    <div class="pattern-card">
+                    <div class="pattern-card animated-card">
                         <h3>⬆️ Промени в периодите (отляво надясно)</h3>
                         <ul>
                             <li>Атомният номер <strong>расте</strong></li>
@@ -151,7 +152,7 @@
                         </div>
                     </div>
 
-                    <div class="pattern-card">
+                    <div class="pattern-card animated-card">
                         <h3>⬇️ Промени в групите (отгоре надолу)</h3>
                         <ul>
                             <li>Атомният номер <strong>расте</strong></li>
@@ -210,35 +211,35 @@
             <div class="discovery-timeline">
                 <h2>📅 Ключови моменти в историята</h2>
                 <div class="timeline">
-                    <div class="timeline-item">
+                    <div class="timeline-item animated-card">
                         <div class="timeline-year">1869</div>
                         <div class="timeline-content">
                             <h4>Създаване на таблицата</h4>
                             <p>Менделеев публикува първата периодична таблица с 63 елемента</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
+                    <div class="timeline-item animated-card">
                         <div class="timeline-year">1871</div>
                         <div class="timeline-content">
                             <h4>Предсказания</h4>
                             <p>Предвижда свойствата на галий, скандий и германий</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
+                    <div class="timeline-item animated-card">
                         <div class="timeline-year">1875-1886</div>
                         <div class="timeline-content">
                             <h4>Потвърждение</h4>
                             <p>Откриване на предсказаните от Менделеев елементи</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
+                    <div class="timeline-item animated-card">
                         <div class="timeline-year">1913</div>
                         <div class="timeline-content">
                             <h4>Модерна таблица</h4>
                             <p>Мозли подрежда елементите по атомен номер, не по маса</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
+                    <div class="timeline-item animated-card">
                         <div class="timeline-year">Днес</div>
                         <div class="timeline-content">
                             <h4>118 елемента</h4>
@@ -266,7 +267,9 @@
                 </div>
             </div>
 
-            <div class="periodic-table" id="periodicTable"></div>
+            <div class="table-scroll-wrapper">
+                <div class="periodic-table" id="periodicTable"></div>
+            </div>
 
             <div class="element-details" id="elementDetails">
                 <h2>Избери елемент</h2>
@@ -419,9 +422,6 @@
                 </div>
             </div>
 
-            <div class="balance-exercise" id="balanceExercise">
-                <button id="startBalance" class="quiz-btn">Започни упражнение</button>
-            </div>
         </div>
 
         <!-- Секция: Викторина -->
@@ -442,7 +442,7 @@
 
     <div class="features-section">
         <div class="features-container">
-            <div class="feature-item">
+            <div class="feature-item animated-card">
                 <div class="feature-icon">
                     🧬
                 </div>
@@ -453,7 +453,7 @@
                 </p>
             </div>
             
-            <div class="feature-item">
+            <div class="feature-item animated-card">
                 <div class="feature-icon">
                     📱
                 </div>
@@ -464,7 +464,7 @@
                 </p>
             </div>
             
-            <div class="feature-item">
+            <div class="feature-item animated-card">
                 <div class="feature-icon">
                     🧪
                 </div>
@@ -537,6 +537,7 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="animations.js"></script>
 </body>
 </html>
 
