@@ -508,14 +508,14 @@
             </div>
             <div class="contact-form-section">
                 <h4>Свържи се с нас</h4>
-                <form id="contactForm" class="contact-form">
+                <form id="contact-form" class="contact-form">
                     <div class="form-group">
                         <label for="contactName">Име</label>
-                        <input type="text" id="contactName" name="name" placeholder="Иван Иванов" required>
+                        <input type="text" id="contactName" name="from_name" placeholder="Иван Иванов" required>
                     </div>
                     <div class="form-group">
                         <label for="contactEmail">Имейл</label>
-                        <input type="email" id="contactEmail" name="email" placeholder="ivan@example.com" required>
+                        <input type="email" id="contactEmail" name="from_email" placeholder="ivan@example.com" required>
                     </div>
                     <div class="form-group">
                         <label for="contactMessage">Съобщение</label>
@@ -545,6 +545,27 @@
     <script src="script.js"></script>
     <script src="animations.js"></script>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      emailjs.init("PSt15yZFZ46jgVytu");
+
+      document.getElementById("contact-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        emailjs.sendForm(
+          "service_vebq8it",
+          "template_tfji4f6",
+          this
+        )
+        .then(function() {
+          alert("Съобщението е изпратено успешно!");
+          document.getElementById("contact-form").reset();
+        })
+        .catch(function(error) {
+          alert("Грешка: " + JSON.stringify(error));
+        });
+      });
+    </script>
 </body>
 </html>
 
