@@ -407,7 +407,7 @@
 .feature-item:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    border-color: #8B5CF6;
+    border-color: #2196F3;
 }
 
 .feature-icon {
@@ -590,6 +590,10 @@ body {
         margin: 0 20px;
         margin-top: -20px;
         padding: 40px 20px;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
     
     .container header h1 {
@@ -1427,10 +1431,7 @@ footer {
 }
 
 .quiz-section h2 {
-    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #8B5CF6;
     margin-bottom: 20px;
     text-align: center;
     filter: drop-shadow(0 2px 4px rgba(139, 92, 246, 0.2));
@@ -1438,7 +1439,7 @@ footer {
 }
 
 .quiz-btn {
-    background: #667eea;
+    background: linear-gradient(135deg, #8B5CF6 0%, #667eea 100%);
     color: white;
     border: none;
     padding: 15px 30px;
@@ -1450,7 +1451,7 @@ footer {
 }
 
 .quiz-btn:hover {
-    background: #5568d3;
+    background: linear-gradient(135deg, #7C3AED 0%, #5568D3 100%);
 }
 
 .back-to-nav-btn {
@@ -2250,10 +2251,7 @@ img.portrait-icon {
 }
 
 .card h2 {
-    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #8B5CF6;
     margin-bottom: 10px;
 }
 
@@ -2341,12 +2339,10 @@ main, section {
 }
 
 .timeline-content h4 {
-    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #8B5CF6;
     margin-bottom: 10px;
     font-size: 18px;
+    font-weight: 600;
 }
 
 .timeline-content p {
@@ -2392,12 +2388,10 @@ main, section {
 }
 
 .tutorial-card h4 {
-    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #8B5CF6;
     margin-bottom: 15px;
     font-size: 20px;
+    font-weight: 600;
 }
 
 .tutorial-card p {
@@ -2416,10 +2410,8 @@ main, section {
 }
 
 .important-box strong {
-    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #8B5CF6;
+    font-weight: 700;
 }
 
 /* Стъпки */
@@ -2467,12 +2459,10 @@ main, section {
 }
 
 .step-card h5 {
-    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #8B5CF6;
     margin-bottom: 10px;
     font-size: 16px;
+    font-weight: 600;
 }
 
 .step-card p {
@@ -2629,10 +2619,7 @@ main, section {
     padding: 18px 22px;
     font-size: 18px;
     font-weight: 700;
-    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #8B5CF6;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2647,7 +2634,7 @@ main, section {
 .accordion-header::after {
     content: '▸';
     font-size: 26px;
-    color: #667eea;
+    color: #8B5CF6;
     transition: transform 0.3s ease;
     line-height: 1;
 }
@@ -2657,7 +2644,7 @@ details[open] > .accordion-header::after {
 }
 
 .accordion-header:hover {
-    background: rgba(102, 126, 234, 0.06);
+    background: rgba(139, 92, 246, 0.06);
 }
 
 .accordion-body {
@@ -2725,6 +2712,12 @@ details[open] > .accordion-header::after {
 @media (max-width: 768px) {
     .periodic-table {
         grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    }
+    
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
     }
     
     .element-symbol {
@@ -2796,6 +2789,184 @@ details[open] > .accordion-header::after {
     
     .tutorial-card {
         padding: 20px;
+    }
+    
+    /* Таблици в акордеон - адаптация за мобилни */
+    .atom-table {
+        font-size: 12px;
+        overflow-x: auto;
+        display: block;
+    }
+    
+    .atom-table th,
+    .atom-table td {
+        padding: 6px 4px;
+        font-size: 11px;
+        min-width: 50px;
+    }
+    
+    .atom-table th {
+        font-size: 12px;
+    }
+    
+    /* Нива на сложност за мобилни */
+    .difficulty-buttons,
+    .mode-buttons {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .difficulty-btn {
+        width: 100%;
+        padding: 18px 20px;
+        font-size: 0.95rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        line-height: 1.4;
+        min-height: 70px;
+        border-radius: 10px;
+    }
+    
+    .mode-btn {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        padding: 18px 15px;
+        border-radius: 10px;
+    }
+    
+    .mode-icon {
+        font-size: 1.5rem;
+    }
+    
+    .mode-title {
+        font-size: 0.95rem;
+    }
+    
+    .mode-desc {
+        font-size: 0.8rem;
+    }
+    
+    /* Заглавия на секциите за избор - мобилни */
+    .difficulty-selector h3,
+    .game-mode-selector h3 {
+        font-size: 0.95rem;
+        text-align: left;
+        margin-bottom: 10px;
+        justify-content: flex-start;
+        font-weight: 600;
+        color: #374151;
+    }
+    
+    body.dark-theme .difficulty-selector h3,
+    body.dark-theme .game-mode-selector h3 {
+        color: #D1D5DB;
+    }
+    
+    .difficulty-selector,
+    .game-mode-selector {
+        padding: 0;
+        background: transparent;
+        margin-bottom: 5px;
+    }
+    
+    .game-selection {
+        padding: 18px 15px;
+        gap: 22px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    
+    body.dark-theme .game-selection {
+        background: #1F2937;
+    }
+    
+    .primary-btn {
+        min-width: 100%;
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 1.05rem;
+        font-weight: 600;
+        border-radius: 10px;
+    }
+    
+    /* Levels grid - мобилни */
+    .levels-list {
+        gap: 10px;
+    }
+    
+    .level-item {
+        padding: 12px;
+        gap: 12px;
+    }
+    
+    .level-icon {
+        font-size: 24px;
+        min-width: 32px;
+    }
+    
+    .level-text strong {
+        font-size: 14px;
+    }
+    
+    .level-text span {
+        font-size: 12px;
+    }
+    
+    /* Game description - мобилни */
+    .game-description {
+        padding: 15px;
+        margin: 15px 0;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    .balance-game-section {
+        padding: 20px 15px;
+        margin: 20px 0;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    .balance-game-header {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    .balance-game-header h3 {
+        font-size: 20px;
+    }
+    
+    .game-levels {
+        margin-top: 20px;
+        padding-top: 15px;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    
+    .game-instructions {
+        margin: 15px 0;
+        width: 100%;
+    }
+    
+    .instruction-list {
+        padding-left: 20px;
+    }
+    
+    .instruction-list li {
+        font-size: 13px;
+        margin-bottom: 8px;
     }
 }
 
@@ -3062,10 +3233,7 @@ body.dark-theme .quiz-section {
 
 body.dark-theme .element-details h2,
 body.dark-theme .quiz-section h2 {
-    background: linear-gradient(135deg, #A78BFA 0%, #EC4899 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #A78BFA;
     filter: drop-shadow(0 2px 6px rgba(167, 139, 250, 0.3));
     font-size: 2.2rem;
 }
@@ -3211,10 +3379,7 @@ body.dark-theme .accordion-card {
 }
 
 body.dark-theme .accordion-header {
-    background: linear-gradient(135deg, #A78BFA 0%, #EC4899 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #E5E7EB;
 }
 
 body.dark-theme .accordion-header::after {
@@ -3413,7 +3578,7 @@ body.dark-theme .balance-mode-btn:hover {
 }
 
 body.dark-theme .balance-mode-btn.active {
-    background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%);
+    background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%);
     color: #fff;
     border-color: transparent;
 }
@@ -3587,12 +3752,22 @@ body.dark-theme .molecule-legend h4 {
     margin: 20px 0;
 }
 
+.game-mode-selector,
+.difficulty-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .game-mode-selector h3,
 .difficulty-selector h3 {
     font-size: 1.2rem;
     color: #1F2937;
     margin-bottom: 15px;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 body.dark-theme .game-mode-selector h3,
@@ -3617,6 +3792,13 @@ body.dark-theme .difficulty-selector h3 {
     transition: all 0.3s ease;
     font-size: 0.95rem;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.difficulty-btn {
+    font-weight: 500;
 }
 
 body.dark-theme .mode-btn,
@@ -3635,15 +3817,16 @@ body.dark-theme .difficulty-btn {
 .mode-btn.active,
 .difficulty-btn.active {
     border-color: #8B5CF6;
-    background: #8B5CF6;
+    background: linear-gradient(135deg, #8B5CF6 0%, #667eea 100%);
     color: white;
     font-weight: 600;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
 }
 
 body.dark-theme .mode-btn.active,
 body.dark-theme .difficulty-btn.active {
-    background: #8B5CF6;
-    border-color: #A78BFA;
+    background: linear-gradient(135deg, #8B5CF6 0%, #667eea 100%);
+    border-color: #8B5CF6;
     color: white;
 }
 
@@ -3673,7 +3856,7 @@ body.dark-theme .difficulty-btn.active {
     min-width: 300px;
     padding: 15px 30px;
     font-size: 1.1rem;
-    background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%);
+    background: linear-gradient(135deg, #8B5CF6 0%, #667eea 100%);
     color: white;
     border: none;
     border-radius: 8px;
@@ -4608,17 +4791,25 @@ body.dark-theme .exercise-results h3 {
     margin: 40px 0;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .balance-game-header {
     text-align: center;
     margin-bottom: 30px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .balance-game-header h3 {
     font-size: 24px;
-    color: #667eea;
+    color: #8B5CF6;
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .balance-game-header p {
@@ -4665,8 +4856,8 @@ body.dark-theme .exercise-results h3 {
 }
 
 .balance-mode-btn.active {
-    border-color: #667eea;
-    background: #667eea;
+    border-color: #8B5CF6;
+    background: linear-gradient(135deg, #8B5CF6 0%, #667eea 100%);
     color: white;
 }
 
@@ -5157,6 +5348,71 @@ body.dark-theme .molecule-formula {
     .balance-mode-btn {
         width: 100%;
     }
+
+    .balance-3d-viewer {
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+
+    .balance-3d-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .balance-3d-header h4 {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .balance-3d-controls {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 12px;
+        gap: 6px;
+    }
+
+    .balance-3d-select {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .balance-3d-canvas {
+        height: 180px;
+        margin-top: 10px;
+    }
+
+    .molecule-item {
+        padding: 8px 10px;
+        min-height: 48px;
+        gap: 8px;
+        font-size: 13px;
+    }
+
+    .equation-display {
+        min-height: unset;
+    }
+
+    .atom-counter {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .atom-panel {
+        padding: 12px;
+    }
+
+    .atom-panel h4 {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .atoms-list {
+        gap: 8px;
+    }
 }
 
 /* Coefficient Control Styles - Modern & Purple */
@@ -5266,6 +5522,8 @@ body.dark-theme .coef-value {
     border-radius: 16px;
     border: 1px solid rgba(139, 92, 246, 0.1);
     box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1);
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .game-description > p {
@@ -5277,6 +5535,9 @@ body.dark-theme .coef-value {
 
 .game-instructions {
     margin: 20px 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .game-instructions h4 {
@@ -5289,6 +5550,9 @@ body.dark-theme .coef-value {
 .instruction-list {
     list-style: none;
     padding: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .instruction-list li {
@@ -5315,6 +5579,9 @@ body.dark-theme .coef-value {
     margin-top: 25px;
     padding-top: 20px;
     border-top: 1px solid rgba(139, 92, 246, 0.1);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .game-levels > p {
@@ -5324,51 +5591,70 @@ body.dark-theme .coef-value {
     font-weight: 600;
 }
 
-.levels-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+.levels-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
     gap: 12px;
+    width: 100%;
 }
 
-.level-info {
+.level-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    border-left: 4px solid;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+    transition: all 0.3s ease;
+}
+
+.level-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.15);
+}
+
+.level-icon {
+    font-size: 28px;
+    min-width: 40px;
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 12px 16px;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 10px;
-    border: 1px solid rgba(139, 92, 246, 0.05);
-}
-
-.level-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    min-width: 100px;
     justify-content: center;
+    flex-shrink: 0;
 }
 
-.level-badge.green {
-    background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
-    color: white;
+.level-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
-.level-badge.yellow {
-    background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
-    color: white;
+.level-text strong {
+    color: #1F2937;
+    font-size: 15px;
+    font-weight: 700;
 }
 
-.level-badge.red {
-    background: linear-gradient(135deg, #EF4444 0%, #F87171 100%);
-    color: white;
-}
-
-.level-info span:last-child {
+.level-text span {
     color: #6B7280;
     font-size: 14px;
+    line-height: 1.5;
+}
+
+.level-item:has(.level-icon.green) {
+    border-left-color: #10B981;
+}
+
+.level-item:has(.level-icon.yellow) {
+    border-left-color: #F59E0B;
+}
+
+.level-item:has(.level-icon.red) {
+    border-left-color: #EF4444;
 }
 
 /* Dark theme styles for game description */
